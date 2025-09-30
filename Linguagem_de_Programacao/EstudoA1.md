@@ -146,3 +146,86 @@ print(X)
 
 . `str.upper` é um unbound method (uma função simples) porque é acedido através da classe (str). Para usá-lo, terias de passar a instância manualmente: `str.upper(minha_string)`.
 
+# Unittest
+
+## Criando testes unitários para o seu programa 
+
+A biblioteca padrão unitests do python, permite que você faça testes unitários do seu código. Ou seja é possível verificar se cada unidade do código (funções...) está funcionando como deveria.
+
+1. Test Case: Um test case é uma unidade de teste individual. O mesmo verifica uma resposta específica a um determinado conjunto de entradas. O unittest fornece uma classe base, TestCase, que pode ser usada para criar novos casos de teste.
+
+2. Test Suit: Uma test suite é uma coleção de casos de teste, conjuntos de teste ou ambos. O mesmo é usado para agregar testes que devem ser executados juntos.
+
+Um test case é criado ao criar uma subclasse da classe base `unittest.TestCase`. Todos os testes devem começar com `test` (ex: test_upper, test_split...) para que o test runner seja informado de quais métodos são testes.
+
+```python
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+if __name__ == '__main__':
+    unittest.main()
+```
+
+## Tabela de Asserção
+
+|Método| Avalia - se|
+|---|---|
+|assertEqual(a, b)|a == b|
+|assertNotEqual(a, b)| a != b|
+|assertTrue(x)| bool(x) is True|
+|assertFalse(x)| bool(x) is False|
+|assertIs(a, b)| a is b|
+|assertIsNot(a, b)| a is not b|
+|assertIsNone(x) |x is None|
+|assertIsNotNone(x)| x is not None|
+|assertIn(a, b)| a in b|
+|assertNotIn(a, b)| a not in b|
+|assertIsInstance(a, b)| isinstance(a, b)|
+|assertNotIsInstance(a, b)| not isinstance(a, b)|
+|assertRaises(exc, fun, *args, **kwds)|fun(*args, **kwds) levanta exc|
+
+# Functools
+## @wraps
+
+É comum termos o problema de quando criamos um decorador a função decorada perde suas características. Por exemplo, o nome e a documentação da função decorada se tornam os do decorador. Ao usar `@wraps` no decorador as caracterísicas da função continuam as mesmas.
+
+```python
+from functools import wraps
+def my_decorator(f):
+    @wraps(f)
+    def wrapper(*args, **kwds):
+        print('Calling decorated function')
+        return f(*args, **kwds)
+    return wrapper
+
+@my_decorator
+def example():
+    """Docstring"""
+    print('Called example function')
+
+>>> example()
+'Calling decorated function'
+'Called example function'
+>>> example.__name__
+'example'
+example.__doc__
+'Docstring'
+```
+
+Sem o @wraps o `example.__name__` retornaria `wrapper`e o `example.__doc__` retornaria `None`.
+
