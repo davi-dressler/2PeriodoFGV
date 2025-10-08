@@ -141,7 +141,7 @@ Parâmetros facultativos:
 
 ## Seleção
 
-### Getitem([])
+### Getitem([ ])
 
 ```python
 >>>dates = pd.date_range("20130101", periods=6)
@@ -180,6 +180,78 @@ df[0:3] #Retorna as linhas de 0 a 3, exclusive.
 
 df["20130102":"20130104"] #Retorna as linhas com rótulo 20130102 a 20130104, inclusive.
 
+```
+
+### Seleção por rótulo
+Usando `DataFrame.loc` e `DataFrame.at()`.
+
+```python
+
+df.loc["2013-01-01"] #Retorna a linha correspondente ao rótulo
+
+```
+
+Podemos selecionar tmbém todas as linhas com algumas colunas estabelecidas:
+
+```python
+df.loc[:, ["A", "B"]] #Retorna todas as linhas das colunas A e B
+```
+É possível fazer o slice nas linhas aqui também.
+
+Selecionar uma linha única e uma coluna única retorna a entrada na linha e coluna especificadas:
+
+```python
+>>> df.loc["2013-01-01", "B"] 
+
+-0.282863
+```
+
+Para acessar a entrada de forma mais rápida usamos o método `.at`:
+
+```python
+>>> df.at["2013-01-01", "B"] 
+
+-0.282863
+```
+
+### Seleção por posição
+Usando `DataFrame.iloc` e `DataFrame.iat()`.
+
+Selecinando através de índices numéricos:
+
+```python 
+df.iloc[3] #Retorna a quarta coluna. (índices começando em 0)
+
+df.iloc[3:5, 0:2] #Retorna a 4º e 5º linhas da 1º e 2º coluna (de 3 a 5, exclusive e de 0 a 2, exclusive) OBS: Note o padrão da lei de lico, primeiro linhas, depois colunas.
+
+df.iloc[[1,2,4], [0,2]] #Ao ser dado uma lista de inteiros ele retorna as linhas e colunas dos índices dados.
+
+df.iloc[1:3, :] #Retorna todas as colunas das 2º e 3º linhas. OBS: É possível fazer a mesma coisa com as colunas.
+
+df.iloc[1, 1] #Para buscar uma entrada específica.
+
+df.iat[1, 1] #Retorna a mesma coisa, mas o rocesso é masi rápido.
+
+```
+
+## Indexação Boolenana
+
+Selecionar as linhas onde a entradas da coluna "A" são maiores do que 0:
+
+```python
+df[df["A"] > 0]
+```
+
+Selecionar os valores do DataFrame inteiro que são maiores do que zero:
+
+```python
+df[df > 0]
+```
+
+Filtrando usando `.isin`:
+
+```python
+df[df["A"].isin([1,2,3])] #Retorna todas as linhas cujas entradas estão na lista dada.
 ```
 
 
