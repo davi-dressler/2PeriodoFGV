@@ -1,0 +1,49 @@
+[
+  {
+    "month": "2025-01",
+    "Dexter": 150,
+    "Suits": 210,
+    "Vikings": 180,
+    "Breaking Bad": 350,
+    "The Walking Dead": 290
+  },
+  {
+    "month": "2025-02",
+    "Dexter": 170,
+    "Suits": 250,
+    "Vikings": 190,
+    "Breaking Bad": 380,
+    "The Walking Dead": 320
+  },
+  {
+    "month": "2025-03",
+    "Dexter": 165,
+    "Suits": 240,
+    "Vikings": 205,
+    "Breaking Bad": 410,
+    "The Walking Dead": 310
+  },
+  {
+    "month": "2025-04",
+    "Dexter": 180,
+    "Suits": 220,
+    "Vikings": 215,
+    "Breaking Bad": 450,
+    "The Walking Dead": 295
+  },
+  {
+    "month": "2025-05",
+    "Dexter": 190,
+    "Suits": 260,
+    "Vikings": 200,
+    "Breaking Bad": 480,
+    "The Walking Dead": 330
+  },
+  {
+    "month": "2025-06",
+    "Dexter": 175,
+    "Suits": 280,
+    "Vikings": 220,
+    "Breaking Bad":500,
+    "The Walking Dead": 350}
+]
