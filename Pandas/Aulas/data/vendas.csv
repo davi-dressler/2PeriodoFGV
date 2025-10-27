@@ -1,0 +1,108 @@
+Vendedor,Produto,Valor,Região,DataVenda
+Elias,Pepino,45.58,sudeste ,2025-01-16
+Yuri,Cobertor,30.91,sul,2025-03-02
+Cauã,DVD,10.38,Nordeste,2025-03-05
+Nina,Panela,90.71,sul,2025-03-04
+Luis Eduardo,Marmita,24.85,sul,2025-03-10
+Luis Eduardo,Pepino,53.08,Nordeste,2025-01-22
+Matheus,Panela,84.51,Sudeste,2025-03-08
+Yuri,Café,2.17,sul,2025-03-17
+Nina,Pepino,43.66,Nordeste,2025-01-26
+Cauã,Pepino,55.12,Centro-oeste,2025-01-16
+Matheus,DVD,11.51,sudeste ,2025-02-20
+Yuri,Pepino,44.67,sudeste ,2025-03-27
+Cauã,Marmita,,sul,2025-02-26
+Luis Eduardo,Café,2.11,Sudeste,2025-01-29
+Luis Eduardo,Cobertor,33.21,Sudeste,2025-03-19
+Luis Eduardo,Marmita,24.93,Centro-oeste,2025-03-10
+Elias,Café,1.94,sul,2025-02-16
+Nina,Pepino,45.1,sudeste ,2025-03-03
+Elias,Marmita,17.69,Sudeste,2025-03-10
+Luis Eduardo,Panela,89.39,sul,2025-03-17
+Nina,Café,1.98,Sudeste,2025-01-16
+Matheus,Marmita,20.89,Nordeste,2025-03-31
+Luis Eduardo,DVD,10.36,Sudeste,2025-03-31
+Elias,Pepino,55.38,sudeste ,2025-02-17
+Elias,Pepino,50.08,norte,2025-03-26
+Cauã,Panela,118.9,Centro-oeste,2025-02-08
+Luis Eduardo,Café,1.93,Centro-oeste,2025-02-02
+Nina,Marmita,,sudeste ,2025-01-23
+Nina,Pepino,54.07,Sudeste,2025-01-10
+Matheus,Panela,88.86,sul,2025-03-10
+Nina,Panela,86.08,Sudeste,2025-02-03
+Luis Eduardo,Pepino,53.14,sudeste ,2025-02-21
+Matheus,Pepino,48.55,Centro-oeste,2025-01-10
+Yuri,DVD,10.93,Sudeste,2025-01-19
+Yuri,Marmita,21.23,Centro-oeste,2025-02-27
+Cauã,DVD,9.91,sul,2025-01-01
+Elias,Panela,88.99,Centro-oeste,2025-03-10
+Matheus,Café,1.61,Centro-oeste,2025-01-04
+Nina,DVD,9.42,norte,2025-01-16
+Elias,Marmita,,norte,2025-01-24
+Matheus,Marmita,20.56,Nordeste,2025-03-21
+Elias,DVD,8.38,norte,2025-01-02
+Matheus,Panela,102.25,Centro-oeste,2025-02-01
+Yuri,DVD,10.5,sudeste ,2025-03-25
+Luis Eduardo,DVD,8.85,Centro-oeste,2025-01-24
+Nina,Pepino,51.0,sudeste ,2025-01-12
+Elias,Cobertor,30.23,sudeste ,2025-02-19
+Nina,Panela,85.14,norte,2025-02-04
+Nina,Pepino,52.33,Sudeste,2025-02-02
+Luis Eduardo,DVD,10.73,sul,2025-02-02
+Yuri,Marmita,22.82,norte,2025-03-02
+Cauã,Pepino,56.85,norte,2025-02-20
+Yuri,Pepino,41.05,Sudeste,2025-02-12
+Yuri,Panela,87.81,sul,2025-01-12
+Nina,Marmita,21.34,Centro-oeste,2025-03-08
+Yuri,Pepino,53.34,Nordeste,2025-03-06
+Matheus,Cobertor,32.01,Nordeste,2025-02-02
+Luis Eduardo,Café,3.0,Centro-oeste,2025-02-09
+Matheus,Pepino,53.71,norte,2025-03-15
+Elias,Café,2.3,sul,2025-02-12
+Elias,DVD,11.24,norte,2025-02-13
+Luis Eduardo,Cobertor,32.54,sudeste ,2025-01-29
+Cauã,Cobertor,28.77,norte,2025-01-13
+Elias,Panela,,norte,2025-01-12
+Luis Eduardo,Pepino,,Centro-oeste,2025-02-15
+Nina,Café,1.94,Centro-oeste,2025-01-02
+Matheus,DVD,,Centro-oeste,2025-02-04
+Cauã,Pepino,50.53,Nordeste,2025-03-28
+Matheus,Pepino,65.05,sudeste ,2025-03-22
+Yuri,Panela,75.73,Centro-oeste,2025-03-31
+Cauã,Cobertor,32.68,sul,2025-01-08
+Luis Eduardo,Pepino,39.52,Nordeste,2025-01-26
+Matheus,Panela,93.86,Sudeste,2025-03-15
+Cauã,Pepino,57.08,sul,2025-03-31
+Cauã,Cobertor,30.25,sul,2025-02-03
+Cauã,Pepino,42.99,Centro-oeste,2025-01-07
+Cauã,Cobertor,27.21,Sudeste,2025-03-09
+Matheus,DVD,10.88,Sudeste,2025-02-27
+Elias,Marmita,18.1,Nordeste,2025-03-16
+Matheus,Pepino,51.41,Sudeste,2025-01-29
+Yuri,DVD,10.06,sudeste ,2025-02-05
+Nina,Pepino,45.76,Centro-oeste,2025-03-30
+Elias,Marmita,25.57,Sudeste,2025-01-21
+Matheus,Marmita,,Nordeste,2025-02-05
+Elias,DVD,7.37,sudeste ,2025-01-10
+Elias,Cobertor,,norte,2025-03-14
+Cauã,Café,1.83,norte,2025-01-24
+Nina,Panela,111.08,sudeste ,2025-03-05
+Yuri,Panela,89.7,Nordeste,2025-02-18
+Elias,Pepino,49.25,sudeste ,2025-02-05
+Matheus,Pepino,53.28,Centro-oeste,2025-03-23
+Cauã,Marmita,22.25,Centro-oeste,2025-01-24
+Cauã,Marmita,16.88,norte,2025-01-23
+Nina,Cobertor,28.7,Sudeste,2025-03-03
+Cauã,DVD,9.38,Nordeste,2025-02-06
+Elias,DVD,9.15,norte,2025-01-12
+Nina,Café,2.46,Sudeste,2025-02-24
+Elias,Marmita,21.05,Sudeste,2025-01-13
+Matheus,Marmita,16.72,Centro-oeste,2025-01-23
+Matheus,Café,2.24,sul,2025-03-30
+Matheus,Pepino,48.55,Centro-oeste,2025-01-10
+Luis Eduardo,Cobertor,32.54,sudeste ,2025-01-29
+Cauã,Marmita,,sul,2025-02-26
+Cauã,Cobertor,30.25,sul,2025-02-03
+Yuri,Panela,89.7,Nordeste,2025-02-18
+Elias,Panela,88.99,Centro-oeste,2025-03-10
+Nina,Panela,111.08,sudeste ,2025-03-05
