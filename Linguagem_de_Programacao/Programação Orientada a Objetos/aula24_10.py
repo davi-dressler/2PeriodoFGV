@@ -34,28 +34,30 @@ class Account:
         """Docstring Lindo..."""
         
         # Atributos da minha classe
-        self.owner = owner
+        self.customer = owner
         self.currency = currency
         self._balance = float(initial_balance) #Membro de dados/Atributo protegido, só pode ser usado na própria classe ou em objetos herdados dessa classe.
         self.created_at = datetime.now().isoformat(timespec = "seconds")
         
-        print(f"[INFO] Account created for {self.owner} in {self.currency} currency.")
-        
-    def get_balance(self) -> float:
+        print(f"[INFO] Account created for {self.customer} in {self.currency} currency.")
+    
+    @property
+    def balance(self) -> float:
         return self._balance
     
-    def set_balance(self, new_balance: float) -> float:
+    @balance.setter
+    def balance(self, new_balance: float) -> float:
         if new_balance != new_balance:
             print("[ERROR] Balance cannot be set to NaN.")
             return
         
         self._balance = float(new_balance)
-        return self._balance
+        
     
     def show_balance(self) -> None:
         print("#"* 60)
-        print(f"Owner: {self.owner}")
-        print(f"Balance: {self._balance:.2f} {self.currency}")
+        print(f"Owner: {self.customer}")
+        print(f"Balance: {self.balance:.2f} {self.currency}")
         print(f"Created at: {self.created_at}")
         print("#"* 60)
         
@@ -65,21 +67,37 @@ class Account:
             return
         
         if self._balance < amount:
-            print(f"[ERROR] Insuficient balance: {self._balance:.2f} {self.currency}")
+            print(f"[ERROR] Insuficient balance: {self.balance:.2f} {self.currency}")
             return
         
-        self._balance -= amount
+        self.balance -= amount
         
-        print(f"[OK] \nWithdrawal: {amount:.2f} \nNew balance: {self._balance:.2f} {self.currency}")
+        print(f"[OK] \nWithdrawal: {amount:.2f} \nNew balance: {self.balance:.2f} {self.currency}")
         
     def deposit(self, amount: float) -> None:
         if amount <= 0:
             print("[ERROR] \nValue must be positive.")
             return
         
-        self._balance += amount
+        self.balance += amount
         
-        print(f"[OK] \nDeposited: {amount:.2f} \nNew balance: {self._balance:.2f} {self.currency}")
+        print(f"[OK] \nDeposited: {amount:.2f} \nNew balance: {self.balance:.2f} {self.currency}")
+    
+class Customer:
+    """Docstring Lindo"""
+    
+    def __init__(self, name: str, email: str):
+        self.name = name
+        self.email = email
+        self._accounts: list[Account] = []
+    
+    @property
+    def accounts(self) -> list[Account]:
+        return list(self.accounts)
+    
+    def add_accounts(self, account: Account):
+        if account not in self._account:
+            self._account.append(account)
         
         
 
@@ -93,15 +111,9 @@ print(dir(acc1))
 
 print("\n", "="*60,"\n")
 
-acc1.withdraw(100)
+acc1.withdraw(300)
 
 
 acc1.show_balance()
+print(acc1.balance)
 
-
-        
-    
-        
-        
-    
-    
