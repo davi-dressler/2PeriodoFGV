@@ -8,6 +8,10 @@ Prof.: Rafael Pinho
 
 from datetime import datetime
 
+class BankingError(Exception): pass
+class NegativeAmountError(BankingError): pass
+class FundsNotFound(BankingError): pass
+
 class Account:
     """
     Representa uma conta bancária simples
@@ -39,6 +43,9 @@ class Account:
         self._balance = float(initial_balance) #Membro de dados/Atributo protegido, só pode ser usado na própria classe ou em objetos herdados dessa classe.
         self.created_at = datetime.now().isoformat(timespec = "seconds")
         
+        if hasattr(self.customer, "add_accounts"):
+            self.customer.add_accounts(self)
+        
         print(f"[INFO] Account created for {self.customer} in {self.currency} currency.")
     
     @property
@@ -54,16 +61,21 @@ class Account:
         self._balance = float(new_balance)
         
     
-    def show_balance(self) -> None:
-        print("#"* 60)
-        print(f"Owner: {self.customer}")
-        print(f"Balance: {self.balance:.2f} {self.currency}")
-        print(f"Created at: {self.created_at}")
-        print("#"* 60)
+    def __str__(self):
+        return f"Account (owner: {self.customer}), currency: {self.currency}, balance: {self._balance}"
+    
+    #SUBSTITUIDO POR __str__
+    # def show_balance(self) -> None:
+    #     print("#"* 60)
+    #     print(f"Owner: {self.customer}")
+    #     print(f"Balance: {self.balance:.2f} {self.currency}")
+    #     print(f"Created at: {self.created_at}")
+    #     print("#"* 60)
         
     def withdraw(self, amount: float):
         if  amount <= 0:
-            print("Withdrawal must be positive.")
+            raise NegativeAmountError("[ERROR] Withdrawal must be positive.")
+            # print("Withdrawal must be positive.") #SUBSTITUIDO PELO raise
             return
         
         if self._balance < amount:
@@ -72,11 +84,14 @@ class Account:
         
         self.balance -= amount
         
+        return self.balance
+        
         print(f"[OK] \nWithdrawal: {amount:.2f} \nNew balance: {self.balance:.2f} {self.currency}")
         
     def deposit(self, amount: float) -> None:
         if amount <= 0:
-            print("[ERROR] \nValue must be positive.")
+            raise NegativeAmountError("[ERROR] Value must be positive.")
+            # print("[ERROR] \nValue must be positive.") #SUBSTITUIDO PELO raise
             return
         
         self.balance += amount
@@ -115,5 +130,5 @@ acc1.withdraw(300)
 
 
 acc1.show_balance()
-print(acc1.balance)
+print(acc1)
 
